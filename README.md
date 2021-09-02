@@ -4,7 +4,7 @@
 
 ## Overview
 
-This collection of Docker and Terraform files let you create a simple API using the Fargate Elastic Container Service (ECS) in AWS. You can also opt to use other platforms to manage your containers, but it will require a rewrite of the [main.tf](terraform/main.tf) file included here.
+This collection of Docker and Terraform files lets you create a simple API using the Fargate Elastic Container Service (ECS) in AWS. You can also opt to use other platforms to manage your containers, but it will require a rewrite of the [main.tf](terraform/main.tf) file included here.
 
 > ***CAUTION!***: The infrastructure and API provisioned by the following steps are **for educational and testing purposes only**, and are NOT secure for real, production usage. Make sure to clean your account up once you're done with these.
 
@@ -71,6 +71,8 @@ This collection of Docker and Terraform files let you create a simple API using 
 
 6. Execute the Terraform templates to create the rest of the infrastructure.
 
+    > Don't forget to update all the placeholders (marked with "**< >**") with your values before deploying the Terraform templates.
+
 ### Test
 
 1. Navigate to the [ECS console](https://console.aws.amazon.com/ecs).
@@ -88,7 +90,7 @@ This collection of Docker and Terraform files let you create a simple API using 
 7. The default [app.py](docker/app.py) Python3 code requires a name (any name, no spaces) in the path part and returns a howdy as follows:
     
     ```txt
-    HTTP GET 'http://3.87.24.111/JacknJill'
+    HTTP GET 'http://<IP.address>/JacknJill'
     ```
     
     Giving the following response:
